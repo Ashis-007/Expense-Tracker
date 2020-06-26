@@ -1,11 +1,16 @@
 import React from "react";
+import Provider from "./context/Provider";
+import Form from "./components/Form";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <h1>Expense Tracker</h1>
-    </div>
+    <Provider>
+      <div className="App">
+        <h1>Expense Tracker</h1>
+        <Form />
+      </div>
+    </Provider>
   );
-}
+};
 
 export default App;
