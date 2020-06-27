@@ -8,10 +8,6 @@ import Context from "./context/Context";
 const App = () => {
   const [data, setData] = useContext(Context);
 
-  useEffect(() => {
-    setData(JSON.parse(localStorage.getItem("data")));
-  }, []);
-
   return (
     <div className="App">
       <Header />

@@ -6,7 +6,6 @@ const Provider = (props) => {
     {
       amount: 0,
       text: "", // description
-      isExpense: null, // expense or income
       date: "",
     },
   ]);

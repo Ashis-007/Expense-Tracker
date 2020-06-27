@@ -7,33 +7,22 @@ const Form = () => {
   const [data, setData] = useContext(Context);
   const [amount, setAmount] = useState("");
   const [text, setText] = useState("");
-  const [isExpense, setIsExpense] = useState(true);
 
   const clearState = () => {
     setAmount("");
     setText("");
-    setIsExpense(true);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     let newAmount = parseInt(amount, 10);
-    // positive -> income
-    // negative -> expense
-    newAmount > 0 ? setIsExpense(false) : setIsExpense(true);
-
-    // TODO: handle date
     let date = moment().format("DD/MM/YYYY");
-    const expense = { amount: newAmount, text, isExpense, date };
+    const expense = { amount: newAmount, text, date };
     // add to data context
     setData((data) => [...data, expense]);
     clearState();
   };
-
-  useEffect(() => {
-    localStorage.setItem("data", JSON.stringify(data));
-  }, [data]);
 
   return (
     <div className="Form">
@@ -48,6 +37,7 @@ const Form = () => {
             onChange={(e) => setAmount(e.target.value)}
             value={amount}
             placeholder="-500"
+            required
           />
         </div>
         <div className="Form__text">
@@ -59,6 +49,7 @@ const Form = () => {
             onChange={(e) => setText(e.target.value)}
             value={text}
             placeholder="Lunch"
+            required
           />
           <button className="btn Form__submit">Add Transaction</button>
         </div>

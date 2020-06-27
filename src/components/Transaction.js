@@ -1,10 +1,10 @@
 import React from "react";
 import "../css/Transaction.css";
-const Transaction = ({ amount, text, isExpense, date }) => {
+const Transaction = ({ amount, text, date }) => {
   return (
     <div
       className="Transaction"
-      style={{ borderRight: `4px solid ${isExpense ? "red" : "green"}` }}
+      style={{ borderRight: `4px solid ${amount < 0 ? "red" : "green"}` }}
     >
       <p className="Transaction__amount">&#x20B9; {Math.abs(amount)}</p>
       <p className="Transaction__text">{text}</p>

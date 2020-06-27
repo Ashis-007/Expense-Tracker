@@ -23,7 +23,7 @@
 
 .Transaction__date {
   position: absolute;
-  top: 2px;
+  bottom: 2px;
   right: 2px;
   font-size: 1.3rem;
   color: rgba(0, 0, 0, 0.6);

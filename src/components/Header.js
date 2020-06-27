@@ -3,7 +3,7 @@ import Context from "../context/Context";
 import "../css/Header.css";
 
 const Header = () => {
-  const [data, setData] = useContext(Context);
+  const [data] = useContext(Context);
 
   const [balance, setBalance] = useState(0);
   const [expense, setExpense] = useState(0);
@@ -13,9 +13,9 @@ const Header = () => {
     let newIncome = 0;
     let newExpense = 0;
     data.map((transaction) =>
-      transaction.isExpense
-        ? (newExpense += parseInt(transaction.amount, 10))
-        : (newIncome = parseInt(transaction.amount, 10))
+      transaction.amount < 0
+        ? (newExpense += transaction.amount)
+        : (newIncome += transaction.amount)
     );
     setIncome(newIncome);
     setExpense(Math.abs(newExpense));
