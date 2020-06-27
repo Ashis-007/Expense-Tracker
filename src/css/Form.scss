@@ -1,0 +1,52 @@
+.Form {
+  width: 100vw;
+  padding-left: 2rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  margin: 2rem auto;
+
+  h2 {
+    font-size: 2.3rem;
+  }
+
+  label,
+  p {
+    font-weight: 500;
+  }
+
+  &__amount,
+  &__text {
+    input {
+      width: 90vw;
+      height: 5vh;
+      border: none;
+      margin: 0 auto 2rem;
+      font-size: 1.7rem;
+      padding: 1rem;
+      transition: 0.2s ease-in;
+
+      &:focus {
+        border: 2px solid #bb2cd9;
+      }
+    }
+  }
+
+  &__submit {
+    width: 90vw;
+    margin: auto;
+    padding: 1rem 2rem;
+    background-color: #bb2cd9;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+
+    &:hover {
+      background-color: #8d379e;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.Transaction {
+  width: 90vw;
+  height: 8vh;
+  margin: 2rem auto;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  font-size: 1.8rem;
+  position: relative;
+
+  &__amount {
+    font-weight: 700;
+  }
+
+  &__date {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    font-size: 1.3rem;
+    color: rgba(0, 0, 0, 0.6);
+  }
+}

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,QAAQ,CAAC;EACP,WAAW,EAAE,qBAAqB;EAClC,YAAY,EAAE,IAAI;EAClB,MAAM,EAAE,MAAM;CAKf;;AARD,AAKE,QALM,CAKN,EAAE,CAAC;EACD,SAAS,EAAE,MAAM;CAClB",
+    "sources": [
+        "History.scss"
+    ],
+    "names": [],
+    "file": "History.css"
+}

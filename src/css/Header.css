@@ -1,0 +1,60 @@
+.Header {
+  font-family: "Poppins", sans-serif;
+  width: auto;
+  padding: 0 2rem;
+}
+
+.Header__heading {
+  width: auto;
+  margin: 2rem auto;
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+.Header__balance {
+  font-size: 3.5rem;
+}
+
+.Header__balance p {
+  font-size: 2.3rem;
+}
+
+.Header__card {
+  width: 80vw;
+  height: 10vh;
+  background: #fff;
+  font-size: 1.7rem;
+  font-weight: 500;
+  margin: 1rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 1rem;
+}
+
+.Header__card #income,
+.Header__card #expense {
+  font-size: 2.8rem;
+  font-weight: 500;
+}
+
+.Header__card #income {
+  color: #43be31;
+}
+
+.Header__card #expense {
+  color: #e71c23;
+}
+
+.Header__card__separator {
+  width: 1px;
+  height: 70%;
+  background-color: #d6d3d3;
+}
+/*# sourceMappingURL=Header.css.map */

@@ -1,16 +1,21 @@
 import React, { useState } from "react";
 import Context from "./Context";
 
-const Provider = () => {
+const Provider = (props) => {
   const [data, setData] = useState([
     {
-      amount: "",
+      amount: 0,
       text: "", // description
-      isExpense: true, // expense or income
+      isExpense: null, // expense or income
+      date: "",
     },
   ]);
 
-  return <Context.Provider value={[data, setData]}></Context.Provider>;
+  return (
+    <Context.Provider value={[data, setData]}>
+      {props.children}
+    </Context.Provider>
+  );
 };
 
 export default Provider;

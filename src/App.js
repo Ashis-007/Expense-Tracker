@@ -1,15 +1,23 @@
-import React from "react";
-import Provider from "./context/Provider";
+import React, { useContext, useEffect } from "react";
+import "./App.css";
 import Form from "./components/Form";
+import Header from "./components/Header";
+import History from "./components/History";
+import Context from "./context/Context";
 
 const App = () => {
+  const [data, setData] = useContext(Context);
+
+  useEffect(() => {
+    setData(JSON.parse(localStorage.getItem("data")));
+  }, []);
+
   return (
-    <Provider>
-      <div className="App">
-        <h1>Expense Tracker</h1>
-        <Form />
-      </div>
-    </Provider>
+    <div className="App">
+      <Header />
+      <Form />
+      <History />
+    </div>
   );
 };
 
