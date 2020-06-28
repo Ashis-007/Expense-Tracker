@@ -8,6 +8,17 @@ import Context from "./context/Context";
 const App = () => {
   const [data, setData] = useContext(Context);
 
+  useEffect(() => {
+    let storedData = JSON.parse(localStorage.getItem("data"));
+    storedData === null
+      ? localStorage.setItem("data", JSON.stringify(storedData))
+      : setData(storedData);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("data", JSON.stringify(data));
+  }, [data]);
+
   return (
     <div className="App">
       <Header />
