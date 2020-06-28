@@ -2,7 +2,7 @@
 
 ### A simple app built using React which tracks your expenses
 
-> ## Available at https://www.example.com
+> ## Available at https://skyexpensetracker.netlify.app
 
 ## Usage
 
