@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from "react";
 import Context from "../context/Context";
 import Transaction from "./Transaction";
 import "../css/History.css";
+import DoughnutChart from "./DoughnutChart";
 
 const History = () => {
   const [data, setData] = useContext(Context);
@@ -41,6 +42,7 @@ const History = () => {
           </button>
         )}
       </div>
+      <DoughnutChart />
     </div>
   );
 };
