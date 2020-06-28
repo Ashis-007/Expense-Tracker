@@ -6,4 +6,21 @@
   h2 {
     font-size: 2.3rem;
   }
+
+  &__clear {
+    width: 90vw;
+    margin: auto;
+    padding: 1rem 2rem;
+    border: 2px solid #bb2cd9;
+    color: #bb2cd9;
+    transition: 0.25s;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.7rem;
+    cursor: pointer;
+
+    &:hover {
+      background: #bb2cd9;
+      color: white;
+    }
+  }
 }
